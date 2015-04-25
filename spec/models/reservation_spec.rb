@@ -4,5 +4,11 @@ RSpec.describe Reservation, type: :model do
   describe 'validation' do
     #it { is_expected.to validate_presence_of(:start_date) }
     #it { is_expected.to validate_presence_of(:end_date) }
+    it 'end_date > start_date' do
+      reservation = build :reservation
+      reservation.end_time = reservation.start_time - 2.hours
+      reservation.valid?
+      expect(reservation.errors).to include :end_time
+    end
   end
 end
