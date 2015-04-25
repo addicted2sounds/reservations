@@ -49,9 +49,9 @@ group :development, :test do
   gem 'faker'
   gem 'database_cleaner'
 end
-
+#
 # group :test do
-#   gem 'shoulda-matchers'#, github: 'thoughtbot/shoulda-matchers'
+#   gem 'shoulda-matchers', github: 'thoughtbot/shoulda-matchers'
 # end
 
 gem 'haml-rails'
