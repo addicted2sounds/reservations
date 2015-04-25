@@ -50,5 +50,10 @@ group :development, :test do
   gem 'database_cleaner'
 end
 
+group :test do
+  gem 'minitest'
+  gem 'shoulda-matchers', github: 'thoughtbot/shoulda-matchers'
+end
+
 gem 'haml-rails'
 

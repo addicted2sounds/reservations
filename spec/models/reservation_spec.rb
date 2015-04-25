@@ -1,7 +1,7 @@
 require 'rails_helper'
-
 RSpec.describe Reservation, type: :model do
-  it 'has valid factory' do
-    expect(create :table).to be_valid
+  it { expect(create :table).to be_valid }
+  describe 'validation' do
+    #it { is_expected.to validate_presence_of(:start_date) }
   end
 end
