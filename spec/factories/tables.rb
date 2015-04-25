@@ -1,7 +1,7 @@
+require 'faker'
 FactoryGirl.define do
   factory :table do
-    number 1
-notes "MyText"
+    sequence :number
+    notes Faker::Lorem.sentence
   end
-
 end
