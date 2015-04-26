@@ -10,5 +10,11 @@ RSpec.describe Reservation, type: :model do
       reservation.valid?
       expect(reservation.errors).to include :end_time
     end
+    it 'table is not reserved' do
+      existing_reservation = create :reservation
+      reservation = existing_reservation.dup
+      reservation.valid?
+      expect(reservation.errors).to include :start_time, :end_time
+    end
   end
 end
