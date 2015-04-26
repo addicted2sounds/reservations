@@ -10,11 +10,12 @@ RSpec.describe Reservation, type: :model do
       reservation.valid?
       expect(reservation.errors).to include :end_time
     end
-    it 'table is not reserved' do
-      # existing_reservation = create :reservation
-      reservation = create(:reservation).dup
-      reservation.valid?
-      expect(reservation.errors).to include :start_time, :end_time
+    context 'already reserved' do
+      it 'both dates in busy interval' do
+        reservation = create(:reservation).dup
+        reservation.valid?
+        expect(reservation.errors).to include :start_time, :end_time
+      end
     end
   end
 end
