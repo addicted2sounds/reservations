@@ -6,14 +6,15 @@
         - @reservation.errors.full_messages.each do |msg|
           %li= msg
 
-  .field
+  .row
     = f.label :table
     = f.text_field :table
-  .field
-    = f.label :start_time
-    = f.text_field :start_time, class: 'datetime-picker'
-  .field
-    = f.label :end_time
-    = f.datetime_select :end_time
-  .actions
+  .row.datetime
+    .col-md-6
+      = f.label :start_time
+      = f.text_field :start_time, class: 'datetime-picker'
+    .col-md-6
+      = f.label :end_time
+      = f.text_field :end_time, class: 'datetime-picker'
+  .row
     = f.submit 'Save'
