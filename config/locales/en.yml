@@ -20,4 +20,10 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  activerecord:
+    errors:
+      models:
+        reservation:
+          attributes:
+            end_time:
+              table_is_already_reserved: Time overlaps already reserved time

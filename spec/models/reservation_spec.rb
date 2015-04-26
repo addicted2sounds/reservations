@@ -13,7 +13,7 @@ RSpec.describe Reservation, type: :model do
     context 'already reserved' do
       it 'both dates in busy interval' do
         reservation = create(:reservation).dup
-        reservation.valid?
+        p reservation.errors[:end_time]
         expect(reservation.errors).to include :start_time, :end_time
       end
     end
