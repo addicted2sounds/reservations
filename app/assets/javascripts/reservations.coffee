@@ -2,4 +2,4 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 $(document).on 'page:change', ->
-  $('.datetime-picker').datetimepicker()
+  $('.datetime-picker').datetimepicker({showTodayButton: true, sideBySide: true})
